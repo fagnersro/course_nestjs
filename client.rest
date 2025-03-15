@@ -3,7 +3,7 @@
 #RECADOS
 GET {{baseUrl}}/recados
 ###
-GET {{baseUrl}}/recados/15
+GET {{baseUrl}}/recados/365/
 
 ### AppControllerGetHello 
 
