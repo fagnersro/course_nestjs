@@ -4,6 +4,8 @@
 GET {{baseUrl}}/recados
 ###
 GET {{baseUrl}}/recados/365/
+###
+POST {{baseUrl}}/recados/
 
 ### AppControllerGetHello 
 
