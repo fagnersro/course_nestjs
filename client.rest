@@ -3,6 +3,12 @@
 #RECADOS
 ### Lista todos os recados
 GET {{baseUrl}}/recados
+
+### query param
+GET {{baseUrl}}/recados/
+?limit=200
+&offset=300
+
 ### Lista apenas um recado
 GET {{baseUrl}}/recados/365/
 ### Cria um recado

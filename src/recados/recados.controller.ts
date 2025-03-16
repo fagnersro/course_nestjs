@@ -8,14 +8,16 @@ import {
   Param,
   Patch,
   Post,
+  Query,
 } from '@nestjs/common';
 
 @Controller('recados')
 export class RecadosController {
   @HttpCode(HttpStatus.OK)
   @Get()
-  findAll(): string {
-    return 'Essa rota retorna todos os recados';
+  findAll(@Query() pagination: any): string {
+    const { limit = 10, offset = 0 } = pagination;
+    return `Essa rota retorna todos os recados. Limite = ${limit} OffSet = ${offset}.`;
   }
 
   @Get(':id')
