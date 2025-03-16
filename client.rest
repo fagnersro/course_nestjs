@@ -13,6 +13,15 @@ Content-Type: application/json
   "nova chave": "outro valor"
 }
 
+###
+PATCH  {{baseUrl}}/recados/1
+Content-Type: application/json
+
+{
+  "recado":"Este é o recado que estou enviando.",
+  "atualizar": true
+}
+
 ### AppControllerGetHello 
 
 # @name AppControllerGetHello
