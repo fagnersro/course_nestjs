@@ -10,24 +10,30 @@ GET {{baseUrl}}/recados/
 &offset=300
 
 ### Lista apenas um recado
-GET {{baseUrl}}/recados/365/
+GET {{baseUrl}}/recados/2/
 ### Cria um recado
 POST {{baseUrl}}/recados/
 Content-Type: application/json
 
-{
-  "recado":"Este é o recado que estou enviando.",
-  "nova chave": "outro valor"
-}
+  {
+    "texto": " Novo recado",
+    "de": "Joana",
+    "para": "João",
+    "lido": false,
+    "data": "2025-03-17T13:26:25.841Z"
+  }
 
 ### Atualiza um recado
-PATCH  {{baseUrl}}/recados/1
+PATCH  {{baseUrl}}/recados/3/
 Content-Type: application/json
 
-{
-  "recado":"Este é o recado que estou enviando.",
-  "atualizar": true
-}
+ {
+    "texto": "Novo recado 3 atualizado",
+    "de": "Joana",
+    "para": "João",
+    "lido": false,
+    "data": "2025-03-17T13:26:25.841Z"
+  }
 
 ### Apaga um recado
 DELETE  {{baseUrl}}/recados/365/
