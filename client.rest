@@ -12,11 +12,11 @@ GET {{baseUrl}}/recados/
 ### Lista apenas um recado
 GET {{baseUrl}}/recados/2/
 ### Cria um recado
-POST {{baseUrl}}/recados/
+POST {{baseUrl}}/recado/
 Content-Type: application/json
 
   {
-    "texto": " Novo recado",
+     "texto": "Novo recado 3 atualizado",
     "de": "Joana",
     "para": "João",
     "lido": false,

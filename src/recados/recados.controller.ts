@@ -8,20 +8,19 @@ import {
   Param,
   Patch,
   Post,
-  Query,
 } from '@nestjs/common';
 import { RecadosService } from './recados.service';
-import type { CreateRecadoDto } from './dto/create-recado.dto';
-import type { UpdateRecadoDto } from './dto/update-recado.dto';
+import { CreateRecadoDto } from './dto/create-recado.dto';
+import { UpdateRecadoDto } from './dto/update-recado.dto';
 
-@Controller('recados')
+@Controller('recado')
 export class RecadosController {
   constructor(private readonly recadosService: RecadosService) {}
 
   @HttpCode(HttpStatus.OK)
   @Get()
-  findAll(@Query() pagination: any) {
-    const { limit = 10, offset = 0 } = pagination;
+  findAll() {
+    // const { limit = 10, offset = 0 } = pagination;
     // return `Essa rota retorna todos os recados. Limite = ${limit} OffSet = ${offset}.`;
     return this.recadosService.findAll();
   }
