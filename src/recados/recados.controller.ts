@@ -13,7 +13,7 @@ import { RecadosService } from './recados.service';
 import { CreateRecadoDto } from './dto/create-recado.dto';
 import { UpdateRecadoDto } from './dto/update-recado.dto';
 
-@Controller('recado')
+@Controller('recados')
 export class RecadosController {
   constructor(private readonly recadosService: RecadosService) {}
 
