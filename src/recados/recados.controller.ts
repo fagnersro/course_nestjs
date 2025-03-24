@@ -33,8 +33,9 @@ export class RecadosController {
   }
 
   @Post()
-  create(@Body() createRecadoDto: CreateRecadoDto) {
-    return this.recadosService.create(createRecadoDto);
+  async create(@Body() createRecadoDto: CreateRecadoDto) {
+    const recado = await this.recadosService.create(createRecadoDto);
+    return recado;
   }
 
   @Patch(':id')

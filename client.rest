@@ -10,13 +10,13 @@ GET {{baseUrl}}/recados/
 &offset=300
 
 ### Lista apenas um recado
-GET {{baseUrl}}/recados/2/
+GET {{baseUrl}}/recados/1/
 ### Cria um recado
 POST {{baseUrl}}/recados/
 Content-Type: application/json
 
   {
-    "texto": "Novo recado 3 atualizado",
+    "texto": "4 NOVO Recado",
     "de": "Joana",
     "para": "João"
   }
