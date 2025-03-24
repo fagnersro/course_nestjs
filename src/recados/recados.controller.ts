@@ -20,10 +20,11 @@ export class RecadosController {
 
   @HttpCode(HttpStatus.OK)
   @Get()
-  findAll() {
+  async findAll() {
     // const { limit = 10, offset = 0 } = pagination;
     // return `Essa rota retorna todos os recados. Limite = ${limit} OffSet = ${offset}.`;
-    return this.recadosService.findAll();
+    const recados = await this.recadosService.findAll();
+    return recados;
   }
 
   @Get(':id')
