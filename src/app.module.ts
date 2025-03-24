@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { RecadosModule } from 'src/recados/recados.module';
+import { PessoasModule } from './pessoas/pessoas.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { RecadosModule } from 'src/recados/recados.module';
       synchronize: true, // Sincroniza com o BD. Não deve ser usado em produção.
     }),
     RecadosModule,
+    PessoasModule,
   ],
   controllers: [],
   providers: [],
