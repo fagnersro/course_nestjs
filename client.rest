@@ -22,12 +22,12 @@ Content-Type: application/json
   }
 
 ### Atualiza um recado
-PATCH  {{baseUrl}}/recados/2/
+PATCH  {{baseUrl}}/recados/4/
 Content-Type: application/json
 
  {
-    "texto": "Recado",
-    "lido": true
+    "texto": "Recado 121ww",
+    "lido": false
   }
 
 ### Apaga um recado
