@@ -1,0 +1,23 @@
+#PESSOAS
+@baseUrl = http://localhost:3000
+###
+
+# LISTA TODAS AS PESSOAS 
+###
+GET {{baseUrl}}/pessoas/
+
+# LISTA APENAS UMA PESSOA
+###
+GET {{baseUrl}}/pessoas/1
+
+#CRIA UMA PESSOA
+###
+POST {{baseUrl}}/pessoas/
+Content-Type: application/json
+
+  {
+    "email": "twesteemail@nest.com",
+    "password": "250250250",
+    "nome": "Jonh Doe"
+  }
+
