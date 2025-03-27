@@ -12,15 +12,23 @@ GET {{baseUrl}}/pessoas/1
 
 #CRIA UMA PESSOA
 ###
-POST {{baseUrl}}/pessoas/
+POST {{baseUrl}}/pessoas/10
 Content-Type: application/json
 
   {
-    "email": "twwwesteemail@nest.com",
     "password": "250250250",
     "nome": "Jonh Doe"
   }
 
 #REMOVE UMA PESSOA
 ###
-DELETE {{baseUrl}}/pessoas/6
+DELETE {{baseUrl}}/pessoas/2
+
+#ATUALIZA UMA PESSOA
+###
+PATCH {{baseUrl}}/pessoas/2
+Content-Type: application/json
+
+{
+  "nome": "Jonh Doe"
+}
