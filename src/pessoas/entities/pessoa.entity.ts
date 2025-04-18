@@ -29,10 +29,11 @@ export class Pessoa {
 
   @UpdateDateColumn()
   updatedAt?: Date;
-
+  // uma pessoa pode ter enviado muitos recados (como "de")
+  // Esses recados são relacionados ao campo "de" na entidade recado
   @OneToMany(() => Recado, (recado) => recado.de)
   recadosEnviados: Recado[];
-
+  // uma pessoa pode ter recebido muits recados (como "para")
   @OneToMany(() => Recado, (recado) => recado.para)
   recadosRecebidos: Recado[];
 }

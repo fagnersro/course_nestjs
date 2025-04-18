@@ -4,13 +4,16 @@ import type { CreateRecadoDto } from './dto/create-recado.dto';
 import type { UpdateRecadoDto } from './dto/update-recado.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import type { Repository } from 'typeorm';
+import { PessoasService } from 'src/pessoas/pessoas.service';
 
 @Injectable()
 export class RecadosService {
   constructor(
     @InjectRepository(Recado)
     private readonly recadoRepository: Repository<Recado>,
+    private readonly pessoasService: PessoasService,
   ) {}
+
 
   throwNotFoundError() {
     // throw new HttpException('Recado não encontrado.', HttpStatus.NOT_FOUND);
